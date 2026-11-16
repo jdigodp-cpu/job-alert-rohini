@@ -1,0 +1,57 @@
+Rohini Ramtekkar
+Sr. Analyst / Software Engineer
+rohinivr28@gmail.com | T 8788972709 | Pune, India | linkedin.com/in/rohinitramtekkar
+
+PROFESSIONAL SUMMARY
+
+Dynamics 365 Developer with ~3 years of experience building customized solutions for business needs. Proficient in model-driven apps, plugins, Power Automate, JavaScript and Azure DevOps. Committed to delivering scalable, high-quality solutions that drive efficiency and success.
+
+WORK EXPERIENCE
+
+Dynamics 365 Developer / Sr. Analyst | CapGemini
+09/2022 - Present | Pune, Maharashtra
+- Designed and developed model-driven apps and customized D365 Modules (Sales, Service, Marketing, Field Service).
+- Created web resources and plugins, automated processes with Power Automate and leveraged OOB functionalities.
+- Managed solution deployment, collaborated with team to gather requirements and provided user training and technical support.
+
+Intern | CapGemini
+03/2022 - 05/2022 | Remote
+- Training – .NET Core with Azure
+
+PROJECTS
+
+Woodland Trust Contractor Management | 04/2026 - Present
+- Implementation of a D365-based Contractor Management solution to streamline contractor onboarding, compliance tracking and work management.
+- Role: Configured tables, forms and views. Automated processes using Power Automate and implemented business logic via plugins and JavaScript. Collaborated with stakeholders to ensure solutions met business requirements.
+
+Woodland Trust | 08/2024 - 03/2026
+- UK non-profit implementing D365 Non-Profit Accelerator CRM to enhance fundraising, relationship management, membership tracking, gift aid and fulfilment.
+- Role: Gathered requirements covering Power Automate, Workflow, Plugins and Integration. Reviewed requirements documents and reviewed solutions to align with business requirements.
+
+Defra Biodiversity Net Gain (BNG) | 03/2024 - 08/2024
+- D365 developer responsible for developing and customising solutions to meet project requirements.
+- Designed model-driven app; configured entities, fields, views, forms and dashboards. Implemented JavaScript web resources, workflows, plugins, and custom ribbon buttons using Power FX. Deployment via Azure DevOps.
+
+ACHIEVEMENTS
+
+- Recognized with a "Rising Star Award" for stellar performance and contribution to the project.
+
+EDUCATION
+
+B. Tech — Computer Engineering | Bajaj Institute of Technology
+08/2018 - 06/2022 | Wardha, Maharashtra
+
+SKILLS
+
+Microsoft Dynamics 365 CRM | Sales / Service / Marketing | Non-Profit Accelerator | Power Apps | Power Automate | JavaScript | Plugins & Web Resources | Power Flow Automation | Azure DevOps
+
+CERTIFICATES
+
+PL-400: Power Platform Developer Associate | Microsoft | 02/2020 – 02/207
+MB-230: D365 Customer Service Functional Associate | Microsoft | 03/2026 – 03/207
+PL-100: Power Platform App Maker | Microsoft
+MB-210: D365 Sales Functional Consultant | Microsoft
+
+LANGUAGES
+
+English (Full Professional) | Hindi (Full Professional) | Marathi (Full Professional)
