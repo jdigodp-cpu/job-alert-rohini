@@ -4,8 +4,9 @@ Scoring (all components 0-1, weighted per config):
 
 * skill_score     - how many resume skills appear in the job text
                     (whole-word matching; negative phrases like
-                     "no SAP experience required" are penalized)
-* title_score     - strong title keywords (SAP, CDS, AMDP, ABAP, HANA, …)
+                     "no Dynamics experience required" are penalized)
+* title_score     - strong title keywords (Dynamics 365, Power Apps,
+                    Power Automate, CRM, …)
 * location_score  - remote/WFH (1.0), named city (0.85), country (0.5)
 * recency_score   - posted within 3 days (1.0), 14 days (0.5), else 0.0
 
@@ -22,10 +23,10 @@ from models import Job, Profile
 
 DEFAULT_THRESHOLDS = {"relevant": 0.60, "maybe": 0.40}
 
-# Phrases that mean the role is explicitly *not* an SAP role.
+# Phrases that mean the role is explicitly *not* a Dynamics role.
 NEGATIVE_SIGNALS = [
-    "no sap experience", "no sap", "non-sap", "sap not required",
-    "without sap", "not sap", "no cds", "no amdp", "non-amdp",
+    "no dynamics experience", "no dynamics", "non-dynamics", "dynamics not required",
+    "without dynamics", "not dynamics", "no crm", "no power apps", "non-powerapps",
 ]
 
 REMOTE_TERMS = ("remote", "work from home", "wfh", "work from anywhere")
@@ -121,7 +122,7 @@ def score_job(
         + weights.get("recency_weight", 0.05) * recency_score
     )
 
-    # Penalize jobs that explicitly say "no SAP experience required", etc.
+    # Penalize jobs that explicitly say "no Dynamics experience required", etc.
     if any(sig in text for sig in NEGATIVE_SIGNALS):
         total *= 0.4
 

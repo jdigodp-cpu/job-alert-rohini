@@ -167,7 +167,7 @@ def _format_header(total_relevant: int, total_maybe: int, duplicates_removed: in
     date_str = now.strftime("%d %b %Y")
     time_str = now.strftime("%I:%M %p IST")
     lines = [
-        "🔔 <b>SAP Job Alert — Daily Digest</b>",
+        "🔔 <b>Dynamics Job Alert — Daily Digest</b>",
         f"📅 <b>Date:</b> {date_str}",
         f"🕐 <b>Time:</b> {time_str}",
         f"✅ <b>Relevant jobs found:</b> {total_relevant}",
@@ -179,12 +179,11 @@ def _format_header(total_relevant: int, total_maybe: int, duplicates_removed: in
 
 # Skill keywords to extract from job descriptions for summarization.
 _SUMMARY_SKILLS = [
-    "SAP CDS Views", "CDS Views", "AMDP", "ABAP", "ABAP on HANA", "ABAP Cloud",
-    "HANA", "HANA Calculation View", "SAP Datasphere", "SAP Analytics Cloud",
-    "SAP Fiori", "Fiori", "RAP", "ABAP RAP", "RESTful Application Programming",
-    "SAP S/4HANA", "S/4HANA", "SAP BW", "SAP BTP", "SAP SCM", "SAP SD",
-    "SAP MM", "SAP FICO", "SAP HCM", "SAP BASIS", "SQL", "Python", "Git",
-    "Web Dynpro", "Embedded Analytics", "Table Functions",
+    "Dynamics 365", "D365", "Power Apps", "Power Automate", "Power Platform",
+    "CRM", "Customer Engagement", "Model-Driven App", "Canvas App",
+    "Plugin", "Plug-in", "Web Resource", "Power FX", "Dataverse",
+    "Azure DevOps", "JavaScript", "C#", ".NET", "Solution Deployment",
+    "Field Service", "Sales", "Service", "Marketing",
 ]
 
 _EXPERIENCE_HINTS = [
@@ -265,13 +264,13 @@ def alert(
 
     # Console / email / toast (unchanged behavior).
     if relevant:
-        body = "New relevant SAP job(s) found:\n\n"
+        body = "New relevant Dynamics job(s) found:\n\n"
         for job in relevant:
             body += _job_line(job)
-        subject = f"SAP Job Alert: {len(relevant)} new relevant job(s)"
+        subject = f"Dynamics Job Alert: {len(relevant)} new relevant job(s)"
     else:
-        body = "No new relevant SAP jobs this run.\n"
-        subject = "SAP Job Alert: no new relevant jobs"
+        body = "No new relevant Dynamics jobs this run.\n"
+        subject = "Dynamics Job Alert: no new relevant jobs"
 
     if maybe:
         body += "\n--- Maybe (lower confidence) ---\n"
@@ -301,7 +300,7 @@ def alert(
         )
 
         if not relevant and not maybe:
-            messages.append("No new relevant SAP jobs today.")
+            messages.append("No new relevant Dynamics jobs today.")
         else:
             if relevant:
                 messages.append(

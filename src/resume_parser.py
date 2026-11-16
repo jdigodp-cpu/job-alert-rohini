@@ -2,7 +2,7 @@
 
 The resume is plain text (resume.txt). We extract:
 
-* skills      - known SAP/data keywords that appear in the resume
+* skills      - known Dynamics/data keywords that appear in the resume
 * title_keywords - role keywords that make a job title relevant
 * experience_years - rough total experience from date ranges
 * raw_text    - full resume text
@@ -18,42 +18,50 @@ from pathlib import Path
 
 from models import Job, Profile
 
-# Canonical skills we care about (from your resume + SAP ecosystem).
+# Canonical skills we care about (from your resume + Microsoft ecosystem).
 KNOWN_SKILLS = [
-    "SAP CDS Views",
-    "CDS Views",
-    "CDS",
-    "AMDP",
-    "ABAP Managed Database Procedures",
-    "ABAP",
-    "SAP Embedded Analytics",
-    "SAP Native HANA Calculation Views",
-    "HANA Calculation View",
-    "Calculation View",
-    "SAP Datasphere",
-    "SAP Analytics Cloud",
-    "SAP Fiori",
-    "Fiori",
-    "RAP",
-    "Web Dynpro",
-    "SQL",
-    "Python",
-    "Git",
-    "GitHub",
+    "Dynamics 365",
+    "D365",
+    "Power Apps",
+    "Power Automate",
+    "Power Platform",
+    "CRM",
+    "Customer Engagement",
+    "Model-Driven App",
+    "Canvas App",
+    "Plugin",
+    "Plug-in",
+    "Web Resource",
+    "Power FX",
+    "Dataverse",
+    "Azure DevOps",
+    "JavaScript",
+    "C#",
+    ".NET",
+    "Solution Deployment",
+    "Field Service",
+    "Sales",
+    "Service",
+    "Marketing",
+    "PL-400",
+    "PL-100",
+    "MB-230",
+    "MB-210",
 ]
 
-# Title keywords that strongly signal a relevant SAP analytics role.
+# Title keywords that strongly signal a relevant Dynamics role.
 TITLE_KEYWORDS = [
-    "SAP",
-    "CDS",
-    "AMDP",
-    "ABAP",
-    "HANA",
-    "Datasphere",
-    "Analytics Cloud",
-    "Fiori",
-    "RAP",
-    "Embedded Analytics",
+    "Dynamics",
+    "D365",
+    "Power Apps",
+    "Power Automate",
+    "Power Platform",
+    "CRM",
+    "Dataverse",
+    "PL-400",
+    "PL-100",
+    "MB-230",
+    "MB-210",
 ]
 
 
@@ -94,8 +102,8 @@ def extract_skills(text: str) -> set[str]:
 def parse_resume(path: Path) -> Profile:
     text = path.read_text(encoding="utf-8") if path.exists() else ""
     skills = extract_skills(text)
-    # Always keep the core SAP CDS/AMDP signals even if parsing misses them.
-    for core in ("CDS Views", "AMDP", "ABAP", "SAP"):
+    # Always keep the core Dynamics signals even if parsing misses them.
+    for core in ("Dynamics 365", "Power Apps", "Power Automate", "CRM"):
         if core not in skills:
             skills.add(core)
     return Profile(

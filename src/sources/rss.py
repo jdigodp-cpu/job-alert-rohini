@@ -33,7 +33,7 @@ class RssSource(Source):
 
     def _fetch_feed(self, url: str, query_terms: list[str]) -> list[Job]:
         req = urllib.request.Request(
-            url, headers={"User-Agent": "sap-job-alert/1.0"}
+            url, headers={"User-Agent": "dynamics-job-alert/1.0"}
         )
         with urllib.request.urlopen(req, timeout=20) as resp:
             xml = resp.read()

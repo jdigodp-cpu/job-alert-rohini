@@ -1,4 +1,4 @@
-"""Daily SAP job alert — single entry point.
+"""Daily Dynamics job alert — single entry point.
 
 Usage:
     python main.py --run-once        # scan sources once, alert on new matches
@@ -249,7 +249,7 @@ def self_test() -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Daily SAP job alert system")
+    parser = argparse.ArgumentParser(description="Daily Dynamics job alert system")
     parser.add_argument(
         "--run-once", action="store_true", help="run one scan and alert"
     )

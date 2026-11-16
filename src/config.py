@@ -1,4 +1,4 @@
-"""Configuration loader for the daily SAP job alert system.
+"""Configuration loader for the daily Dynamics job alert system.
 
 Priority: defaults < config.yaml < environment variables (JOBALERT_*).
 PyYAML is optional; a small built-in parser handles the example config
@@ -24,12 +24,12 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "rss_feeds": {"enabled": False, "urls": []},
     },
     "search_queries": [
-        "SAP CDS Views AMDP",
-        "SAP Embedded Analytics",
-        "SAP Datasphere",
-        "ABAP CDS",
-        "HANA Calculation View",
-        "SAP Fiori analytical app",
+        "Dynamics 365 Developer",
+        "Power Platform Developer",
+        "Power Apps Developer",
+        "Power Automate Developer",
+        "D365 CRM Developer",
+        "Microsoft Dynamics 365",
     ],
     "preferred_locations": ["Pune", "India", "Remote", "Work from home", "WFH"],
     "experience_years": "3+",

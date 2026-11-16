@@ -57,7 +57,7 @@ class RapidApiSource(Source):
             headers={
                 "X-RapidAPI-Key": self.api_key,
                 "X-RapidAPI-Host": urllib.request.urlparse(url).netloc,
-                "User-Agent": "sap-job-alert/1.0",
+                "User-Agent": "dynamics-job-alert/1.0",
             },
         )
         with urllib.request.urlopen(req, timeout=20) as resp:

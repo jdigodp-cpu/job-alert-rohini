@@ -15,7 +15,7 @@ MAIN_SCRIPT = Path(__file__).resolve().parent.parent / "main.py"
 def windows_install() -> str:
     main = str(MAIN_SCRIPT)
     command = (
-        f'schtasks /create /tn "SAP Daily Job Alert" /sc daily /st 09:00 '
+        f'schtasks /create /tn "Dynamics Daily Job Alert" /sc daily /st 09:00 '
         f'/ru "%USERNAME%" /rl HIGHEST /f '
         f'/tr "\"python\" \"{main}\" --run-once"'
     )
@@ -30,7 +30,7 @@ def cron_line() -> str:
 def install() -> None:
     if sys.platform.startswith("win"):
         cmd = windows_install()
-        print("Registering daily Task Scheduler task 'SAP Daily Job Alert' (09:00 daily)...")
+        print("Registering daily Task Scheduler task 'Dynamics Daily Job Alert' (09:00 daily)...")
         print(f"   {cmd}")
         try:
             subprocess.run(cmd, shell=True, check=True)
