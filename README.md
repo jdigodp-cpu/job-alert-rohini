@@ -1,4 +1,4 @@
-# Daily Job Alert — Rohini Ramtekkar
+# Daily Dynamics Job Alert — Rohini Ramtekkar
 
 A self-contained Python system that scans job sources every day, matches postings
 against Rohini's resume (Dynamics 365, Power Apps, Power Automate, Azure DevOps,
@@ -95,7 +95,7 @@ Each relevant job is sent as its own message:
 A header message is sent first with the date, time, and counts:
 
 ```
-🔔 SAP Job Alert — Daily Digest
+🔔 Dynamics Job Alert — Daily Digest
 📅 Date: 13 Nov 2026
 🕐 Time: 09:00 AM IST
 ✅ Relevant jobs found: 3

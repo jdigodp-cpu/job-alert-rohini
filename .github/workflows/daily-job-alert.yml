@@ -1,4 +1,4 @@
-name: Daily SAP Job Alert (Rohini)
+name: Daily Dynamics Job Alert (Rohini)
 
 on:
   schedule:
